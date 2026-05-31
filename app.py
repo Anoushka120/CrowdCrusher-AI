@@ -438,9 +438,11 @@ upload_col, status_col = st.columns([1.05, 0.95])
 with upload_col:
     st.subheader("Video Source")
     uploaded_video = st.file_uploader(
-        "Upload a video file",
+        "Upload video from your PC",
         type=["mp4", "avi", "mov", "mkv", "webm"],
+        help="Choose a local video file from your computer, then click Open in the file picker.",
     )
+    st.caption("Select a video saved on this computer. If your browser shows an extra mobile option, you can ignore it and use Open.")
 
 with status_col:
     st.subheader("Analysis Setup")
